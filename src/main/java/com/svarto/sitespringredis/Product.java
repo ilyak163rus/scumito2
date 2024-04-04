@@ -25,5 +25,6 @@ public class Product implements Serializable {
     private String description;
     private String image_url;
     private boolean active;
+    @Indexed
     private int Category_id;
 }
