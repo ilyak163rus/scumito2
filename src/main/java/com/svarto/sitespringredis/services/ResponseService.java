@@ -4,6 +4,8 @@ import java.security.Principal;
 import java.time.ZonedDateTime;
 import java.util.List;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.support.atomic.RedisAtomicLong;
 import org.springframework.stereotype.Service;
@@ -20,13 +22,13 @@ import lombok.extern.slf4j.Slf4j;
 @Service
 @Slf4j
 @RequiredArgsConstructor
+@AllArgsConstructor
 public class ResponseService {
 
     @Autowired
     private RedisAtomicLong idGenerator;
 
-    @Autowired
-    ResponseRepository responseRepository;
+    private  ResponseRepository responseRepository;
     @Autowired
     private UserRepository userRepository;
 
